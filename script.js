@@ -2,6 +2,15 @@ const revealElements = document.querySelectorAll(".reveal");
 const scrollButtons = document.querySelectorAll("[data-scroll-target]");
 const betaForm = document.querySelector("#beta-form");
 const formMessage = document.querySelector("#form-message");
+const ctaLinks = document.querySelectorAll('a[href="#apply"], button[data-scroll-target], .button[type="submit"]');
+
+function trackEvent(eventName, params = {}) {
+  if (typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", eventName, params);
+}
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -45,6 +54,23 @@ scrollButtons.forEach((button) => {
   });
 });
 
+ctaLinks.forEach((element) => {
+  element.addEventListener("click", () => {
+    const target = element.getAttribute("href") || element.getAttribute("data-scroll-target") || "";
+    const location =
+      element.closest(".hero") ? "hero" :
+      element.closest(".site-header") ? "header" :
+      element.closest(".cta-section") ? "cta_section" :
+      "unknown";
+
+    trackEvent("cta_click", {
+      cta_name: element.textContent.trim(),
+      cta_target: target,
+      cta_location: location
+    });
+  });
+});
+
 betaForm?.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -69,6 +95,11 @@ betaForm?.addEventListener("submit", (event) => {
     `${name}님, 베타 신청이 접수되었습니다. ` +
     `${roleLabelMap[role]} 유형으로 등록되었고 ` +
     `가장 기대하는 기능은 ${interestLabelMap[interest]}입니다.`;
+
+  trackEvent("beta_form_submit", {
+    role: role,
+    interest: interest
+  });
 
   betaForm.reset();
 });
