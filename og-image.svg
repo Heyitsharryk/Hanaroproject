@@ -1,0 +1,56 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">금융을 직접 배우는 가장 쉬운 시작</title>
+  <desc id="desc">5분 영상, 퀴즈, 모의투자로 배우는 청소년 금융 학습 플랫폼</desc>
+  <defs>
+    <linearGradient id="bg" x1="148" y1="58" x2="1028" y2="596" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7E5"/>
+      <stop offset="1" stop-color="#E6F5F2"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="269" y1="170" x2="827" y2="527" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="shadow" x="111" y="93" width="978" height="444" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="22"/>
+      <feGaussianBlur stdDeviation="24"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.164706 0 0 0 0 0.141176 0 0 0 0.14 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <circle cx="1026" cy="118" r="102" fill="#F59E0B" fill-opacity="0.12"/>
+  <circle cx="142" cy="544" r="132" fill="#0F766E" fill-opacity="0.12"/>
+  <g filter="url(#shadow)">
+    <rect x="159" y="119" width="882" height="348" rx="32" fill="white" fill-opacity="0.92"/>
+    <rect x="159.5" y="119.5" width="881" height="347" rx="31.5" stroke="#1F2A24" stroke-opacity="0.08"/>
+  </g>
+  <rect x="219" y="173" width="184" height="46" rx="23" fill="#0F766E" fill-opacity="0.1"/>
+  <text x="311" y="203" text-anchor="middle" fill="#0B5E57" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22" font-weight="700">금융 학습 MVP</text>
+  <text x="219" y="290" fill="#1F2A24" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="60" font-weight="800" letter-spacing="-2">
+    <tspan x="219" dy="0">금융을 직접 배우는</tspan>
+    <tspan x="219" dy="76">가장 쉬운 시작</tspan>
+  </text>
+  <text x="219" y="415" fill="#546158" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="500">
+    <tspan x="219" dy="0">5분 영상, 퀴즈, 모의투자로 배우는</tspan>
+    <tspan x="219" dy="40">청소년 금융 학습 플랫폼</tspan>
+  </text>
+  <g>
+    <rect x="758" y="184" width="220" height="182" rx="28" fill="url(#accent)"/>
+    <rect x="793" y="220" width="150" height="18" rx="9" fill="white" fill-opacity="0.9"/>
+    <rect x="793" y="253" width="118" height="18" rx="9" fill="white" fill-opacity="0.72"/>
+    <rect x="793" y="313" width="62" height="62" rx="20" fill="white" fill-opacity="0.92"/>
+    <path d="M821 349L838 331L853 349" stroke="#0F766E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M881 349L898 331L913 349" stroke="#F59E0B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g>
+    <rect x="219" y="517" width="180" height="48" rx="24" fill="#FFFFFF" fill-opacity="0.88"/>
+    <text x="309" y="547" text-anchor="middle" fill="#1F2A24" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22" font-weight="700">5분 영상</text>
+    <rect x="417" y="517" width="180" height="48" rx="24" fill="#FFFFFF" fill-opacity="0.88"/>
+    <text x="507" y="547" text-anchor="middle" fill="#1F2A24" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22" font-weight="700">퀴즈 확인</text>
+    <rect x="615" y="517" width="210" height="48" rx="24" fill="#FFFFFF" fill-opacity="0.88"/>
+    <text x="720" y="547" text-anchor="middle" fill="#1F2A24" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22" font-weight="700">모의투자 체험</text>
+  </g>
+</svg>
