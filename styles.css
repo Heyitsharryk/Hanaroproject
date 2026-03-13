@@ -46,7 +46,8 @@ a {
 
 button,
 input,
-select {
+select,
+textarea {
   font: inherit;
 }
 
@@ -463,7 +464,8 @@ select {
 }
 
 .cta-form input,
-.cta-form select {
+.cta-form select,
+.cta-form textarea {
   width: 100%;
   min-height: 54px;
   padding: 0 16px;
@@ -474,9 +476,32 @@ select {
 }
 
 .cta-form input:focus,
-.cta-form select:focus {
+.cta-form select:focus,
+.cta-form textarea:focus {
   outline: 2px solid rgba(15, 118, 110, 0.18);
   border-color: var(--primary);
+}
+
+.cta-form textarea {
+  min-height: 124px;
+  padding: 16px;
+  resize: vertical;
+}
+
+.form-field span {
+  font-size: 0.95rem;
+}
+
+.form-field-wide {
+  grid-column: 1 / -1;
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .form-note {
@@ -484,6 +509,26 @@ select {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.form-note[data-state="loading"] {
+  color: var(--primary-strong);
+}
+
+.form-note[data-state="success"] {
+  color: #0f766e;
+}
+
+.form-note[data-state="error"] {
+  color: #b42318;
+}
+
+.cta-form.is-submitting {
+  opacity: 0.92;
+}
+
+.cta-form.is-submitting .button {
+  cursor: wait;
 }
 
 .reveal {

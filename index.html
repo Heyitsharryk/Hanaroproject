@@ -62,7 +62,9 @@
         <a href="#features">기능</a>
         <a href="#apply">베타 신청</a>
       </nav>
-      <a class="button button-small" href="#apply">무료 체험 신청</a>
+      <a class="button button-small cta-trigger" href="#apply" data-cta-location="header" data-cta-name="header_beta_apply">
+        무료 체험 신청
+      </a>
     </header>
 
     <main id="top">
@@ -78,8 +80,16 @@
             어려운 금융 개념을 짧고 재미있게, 실제 선택 경험까지 연결합니다.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#apply">지금 무료로 베타 신청하기</a>
-            <button class="button button-ghost" type="button" data-scroll-target="#solution">
+            <a class="button cta-trigger" href="#apply" data-cta-location="hero" data-cta-name="hero_beta_apply">
+              지금 무료로 베타 신청하기
+            </a>
+            <button
+              class="button button-ghost cta-trigger"
+              type="button"
+              data-scroll-target="#solution"
+              data-cta-location="hero"
+              data-cta-name="hero_view_solution"
+            >
               어떻게 배우는지 보기
             </button>
           </div>
@@ -257,17 +267,39 @@
               1분 안에 신청하고 금융 학습 MVP를 가장 먼저 만나보세요.
             </p>
           </div>
-          <form class="cta-form" id="beta-form">
-            <label>
-              이름
-              <input type="text" name="name" placeholder="이름을 입력하세요" required>
+
+          <form
+            class="cta-form"
+            id="beta-form"
+            action="https://formspree.io/f/xnjgvrjg"
+            method="POST"
+            novalidate
+          >
+            <input type="hidden" name="source_page" value="/">
+            <input type="hidden" name="source_url" value="">
+            <input type="hidden" name="cta_location" value="direct">
+            <input type="hidden" name="cta_name" value="direct_form_access">
+            <input type="hidden" name="referrer" value="">
+            <input type="hidden" name="submitted_at" value="">
+            <input type="hidden" name="utm_source" value="">
+            <input type="hidden" name="utm_medium" value="">
+            <input type="hidden" name="utm_campaign" value="">
+            <input type="hidden" name="utm_term" value="">
+            <input type="hidden" name="utm_content" value="">
+            <input type="hidden" name="_subject" value="새 베타 신청이 접수되었습니다">
+
+            <label class="form-field">
+              <span>이름</span>
+              <input type="text" name="name" placeholder="이름을 입력하세요" minlength="2" required>
             </label>
-            <label>
-              이메일
+
+            <label class="form-field">
+              <span>이메일</span>
               <input type="email" name="email" placeholder="example@email.com" required>
             </label>
-            <label>
-              유형
+
+            <label class="form-field">
+              <span>유형</span>
               <select name="role" required>
                 <option value="">선택해주세요</option>
                 <option value="student">학생</option>
@@ -275,8 +307,9 @@
                 <option value="parent">학부모</option>
               </select>
             </label>
-            <label>
-              가장 기대되는 기능
+
+            <label class="form-field">
+              <span>가장 기대되는 기능</span>
               <select name="interest" required>
                 <option value="">선택해주세요</option>
                 <option value="video">짧은 영상 학습</option>
@@ -284,10 +317,36 @@
                 <option value="simulation">모의투자 체험</option>
               </select>
             </label>
-            <button class="button button-wide" type="submit">지금 무료로 베타 신청하기</button>
+
+            <label class="form-field form-field-wide">
+              <span>추가로 남기고 싶은 말</span>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="어떤 점이 가장 궁금한지, 수업에 어떻게 활용하고 싶은지 자유롭게 적어주세요."
+              ></textarea>
+            </label>
+
+            <div class="form-honeypot" aria-hidden="true">
+              <label>
+                Leave this field empty
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+              </label>
+            </div>
+
+            <button class="button button-wide" id="submit-button" type="submit">
+              지금 무료로 베타 신청하기
+            </button>
+
             <p class="form-note" id="form-message" aria-live="polite">
               신청 정보는 MVP 수요 확인 용도로만 사용됩니다.
             </p>
+
+            <noscript>
+              <p class="form-note">
+                자바스크립트가 꺼져 있어도 제출은 가능하지만, 전환 추적과 즉시 안내 메시지는 제한될 수 있습니다.
+              </p>
+            </noscript>
           </form>
         </div>
       </section>
